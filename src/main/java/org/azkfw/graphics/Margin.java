@@ -26,9 +26,24 @@ package org.azkfw.graphics;
  */
 public class Margin {
 
+	/**
+	 * 上部マージン値
+	 */
 	private float top;
+
+	/**
+	 * 下部マージン値
+	 */
 	private float bottom;
+
+	/**
+	 * 左部マージン値
+	 */
 	private float left;
+
+	/**
+	 * 右部マージン値
+	 */
 	private float right;
 
 	/**
@@ -56,34 +71,74 @@ public class Margin {
 		right = aRight;
 	}
 
+	/**
+	 * 上部マージン値を設定する。
+	 * 
+	 * @param aTop マージン値
+	 */
 	public void setTop(final float aTop) {
 		top = aTop;
 	}
 
+	/**
+	 * 上部マージン値を取得する。
+	 * 
+	 * @return マージン値
+	 */
 	public float getTop() {
 		return top;
 	}
 
+	/**
+	 * 下部マージン値を設定する。
+	 * 
+	 * @param aBottom マージン値
+	 */
 	public void setBottom(final float aBottom) {
 		bottom = aBottom;
 	}
 
+	/**
+	 * 下部マージン値を取得する。
+	 * 
+	 * @return マージン値
+	 */
 	public float getBottom() {
 		return bottom;
 	}
 
+	/**
+	 * 左部マージン値を設定する。
+	 * 
+	 * @param aLeft マージン値
+	 */
 	public void setLeft(final float aLeft) {
 		left = aLeft;
 	}
 
+	/**
+	 * 左部マージン値を取得する。
+	 * 
+	 * @return マージン値
+	 */
 	public float getLeft() {
 		return left;
 	}
 
+	/**
+	 * 右部マージン値を設定する。
+	 * 
+	 * @param aRight マージン値
+	 */
 	public void setRight(final float aRight) {
 		right = aRight;
 	}
 
+	/**
+	 * 右部マージン値を取得する。
+	 * 
+	 * @return マージン値
+	 */
 	public float getRight() {
 		return right;
 	}

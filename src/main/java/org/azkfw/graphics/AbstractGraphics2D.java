@@ -40,6 +40,11 @@ public abstract class AbstractGraphics2D implements Graphics {
 		graphics = aGraphics;
 	}
 
+	/**
+	 * グラフィックスを取得する。
+	 * 
+	 * @return グラフィックスを取得する。
+	 */
 	protected final Graphics2D getGraphics() {
 		return graphics;
 	}

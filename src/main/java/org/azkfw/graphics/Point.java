@@ -26,7 +26,14 @@ package org.azkfw.graphics;
  */
 public final class Point {
 
+	/**
+	 * X値
+	 */
 	private float x;
+
+	/**
+	 * Y値
+	 */
 	private float y;
 
 	/**
@@ -40,26 +47,46 @@ public final class Point {
 	/**
 	 * コンストラクタ
 	 * 
-	 * @param aX x
-	 * @param aY y
+	 * @param aX X値
+	 * @param aY Y値
 	 */
 	public Point(final float aX, final float aY) {
 		x = aX;
 		y = aY;
 	}
 
+	/**
+	 * X値を設定する。
+	 * 
+	 * @param aX X値
+	 */
 	public void setX(final float aX) {
 		x = aX;
 	}
 
+	/**
+	 * X値を取得する。
+	 * 
+	 * @return Y値
+	 */
 	public float getX() {
 		return x;
 	}
 
+	/**
+	 * Y値を設定する。
+	 * 
+	 * @param aY Y値
+	 */
 	public void setY(final float aY) {
 		y = aY;
 	}
 
+	/**
+	 * Y値を取得する。
+	 * 
+	 * @return Y値
+	 */
 	public float getY() {
 		return y;
 	}
