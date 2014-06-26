@@ -79,4 +79,61 @@ public final class Rect {
 		return height;
 	}
 
+	public void setX(final float aX) {
+		x = aX;
+	}
+
+	public void setY(final float aY) {
+		y = aY;
+	}
+
+	public void setWidth(final float aWidth) {
+		width = aWidth;
+	}
+
+	public void setHeight(final float aHeight) {
+		height = aHeight;
+	}
+
+	public void addX(final float aValue) {
+		x += aValue;
+	}
+
+	public void subtractX(final float aValue) {
+		x -= aValue;
+	}
+
+	public void addY(final float aValue) {
+		y += aValue;
+	}
+
+	public void subtractY(final float aValue) {
+		y -= aValue;
+	}
+
+	public void addWidth(final float aValue) {
+		width += aValue;
+	}
+
+	public void subtractWidth(final float aValue) {
+		width -= aValue;
+	}
+
+	public void addHeight(final float aValue) {
+		height += aValue;
+	}
+
+	public void subtractHeight(final float aValue) {
+		height -= aValue;
+	}
+
+	public void addSize(final float aWidth, final float aHeight) {
+		width += aWidth;
+		height += aHeight;
+	}
+
+	public void subtractSize(final float aWidth, final float aHeight) {
+		width -= aWidth;
+		height -= aHeight;
+	}
 }
