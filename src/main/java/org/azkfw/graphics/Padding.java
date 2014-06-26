@@ -18,38 +18,38 @@
 package org.azkfw.graphics;
 
 /**
- * このクラスは、Margin情報を格納したクラスです。
+ * このクラスは、Padding情報を格納したクラスです。
  * 
  * @since 1.1.0
- * @version 1.1.0 2014/06/15
+ * @version 1.1.0 2014/06/26
  * @author Kawakicchi
  */
-public class Margin {
+public class Padding {
 
 	/**
-	 * 上部マージン値
+	 * 上部パディング値
 	 */
 	private float top;
 
 	/**
-	 * 下部マージン値
+	 * 下部パディング値
 	 */
 	private float bottom;
 
 	/**
-	 * 左部マージン値
+	 * 左部パディング値
 	 */
 	private float left;
 
 	/**
-	 * 右部マージン値
+	 * 右部パディング値
 	 */
 	private float right;
 
 	/**
 	 * コンストラクタ
 	 */
-	public Margin() {
+	public Padding() {
 		top = 0.f;
 		bottom = 0.f;
 		left = 0.f;
@@ -59,12 +59,12 @@ public class Margin {
 	/**
 	 * コンストラクタ
 	 * 
-	 * @param aTop 上部マージン値
-	 * @param aBottom 下部マージン値
-	 * @param aLeft 左部マージン値
-	 * @param aRight 右部マージン値
+	 * @param aTop 上部パディング値
+	 * @param aBottom 下部パディング値
+	 * @param aLeft 左部パディング値
+	 * @param aRight 右部パディング値
 	 */
-	public Margin(final float aTop, final float aBottom, final float aLeft, final float aRight) {
+	public Padding(final float aTop, final float aBottom, final float aLeft, final float aRight) {
 		top = aTop;
 		bottom = aBottom;
 		left = aLeft;
@@ -72,79 +72,79 @@ public class Margin {
 	}
 
 	/**
-	 * 上部マージン値を設定する。
+	 * 上部パディング値を設定する。
 	 * 
-	 * @param aTop マージン値
+	 * @param aTop パディング値
 	 */
 	public void setTop(final float aTop) {
 		top = aTop;
 	}
 
 	/**
-	 * 上部マージン値を取得する。
+	 * 上部パディング値を取得する。
 	 * 
-	 * @return マージン値
+	 * @return パディング値
 	 */
 	public float getTop() {
 		return top;
 	}
 
 	/**
-	 * 下部マージン値を設定する。
+	 * 下部パディング値を設定する。
 	 * 
-	 * @param aBottom マージン値
+	 * @param aBottom パディング値
 	 */
 	public void setBottom(final float aBottom) {
 		bottom = aBottom;
 	}
 
 	/**
-	 * 下部マージン値を取得する。
+	 * 下部パディング値を取得する。
 	 * 
-	 * @return マージン値
+	 * @return パディング値
 	 */
 	public float getBottom() {
 		return bottom;
 	}
 
 	/**
-	 * 左部マージン値を設定する。
+	 * 左部パディング値を設定する。
 	 * 
-	 * @param aLeft マージン値
+	 * @param aLeft パディング値
 	 */
 	public void setLeft(final float aLeft) {
 		left = aLeft;
 	}
 
 	/**
-	 * 左部マージン値を取得する。
+	 * 左部パディング値を取得する。
 	 * 
-	 * @return マージン値
+	 * @return パディング値
 	 */
 	public float getLeft() {
 		return left;
 	}
 
 	/**
-	 * 右部マージン値を設定する。
+	 * 右部パディング値を設定する。
 	 * 
-	 * @param aRight マージン値
+	 * @param aRight パディング値
 	 */
 	public void setRight(final float aRight) {
 		right = aRight;
 	}
 
 	/**
-	 * 右部マージン値を取得する。
+	 * 右部パディング値を取得する。
 	 * 
-	 * @return マージン値
+	 * @return パディング値
 	 */
 	public float getRight() {
 		return right;
 	}
 
 	/**
-	 * 上部マージン値に値を加算する。
+	 * 上部パディング値に値を加算する。
 	 * 
 	 * @param aValue 加算値
 	 */
@@ -153,7 +153,7 @@ public class Margin {
 	}
 
 	/**
-	 * 下部マージン値に値を加算する。
+	 * 下部パディング値に値を加算する。
 	 * 
 	 * @param aValue 加算値
 	 */
@@ -162,7 +162,7 @@ public class Margin {
 	}
 
 	/**
-	 * 左部マージン値に値を加算する。
+	 * 左部パディング値に値を加算する。
 	 * 
 	 * @param aValue 加算値
 	 */
@@ -171,7 +171,7 @@ public class Margin {
 	}
 
 	/**
-	 * 右部マージン値に値を加算する。
+	 * 右部パディング値に値を加算する。
 	 * 
 	 * @param aValue 加算値
 	 */
@@ -180,57 +180,56 @@ public class Margin {
 	}
 	
 	/**
-	 * 上部マージン値に値を減算する。
+	 * 上部パディング値に値を除算する。
 	 * 
-	 * @param aValue 減算値
+	 * @param aValue 除算値
 	 */
 	public void subtractTop(final float aValue) {
 		top -= aValue;
 	}
 
 	/**
-	 * 下部マージン値に値を減算する。
+	 * 下部パディング値に値を除算する。
 	 * 
-	 * @param aValue 減算値
+	 * @param aValue 除算値
 	 */
 	public void subtractBottom(final float aValue) {
 		bottom -= aValue;
 	}
 
 	/**
-	 * 左部マージン値に値を減算する。
+	 * 左部パディング値に値を除算する。
 	 * 
-	 * @param aValue 減算値
+	 * @param aValue 除算値
 	 */
 	public void subtractLeft(final float aValue) {
 		left -= aValue;
 	}
 
 	/**
-	 * 右部マージン値に値を減算する。
+	 * 右部パディング値に値を除算する。
 	 * 
-	 * @param aValue 減算値
+	 * @param aValue 除算値
 	 */
 	public void subtractRight(final float aValue) {
 		right -= aValue;
 	}
 
 	/**
-	 * 上下マージン値の合計を取得する。
+	 * 上下パディング値の合計を取得する。
 	 * 
-	 * @return 上下マージン値合計
+	 * @return 上下パディング値合計
 	 */
 	public float getVerticalSize() {
 		return top + bottom;
 	}
 
 	/**
-	 * 左右マージン値の合計を取得する。
+	 * 左右パディング値の合計を取得する。
 	 * 
-	 * @return 左右マージン値合計
+	 * @return 左右パディング値合計
 	 */
 	public float getHorizontalSize() {
 		return left + right;
 	}
-
 }

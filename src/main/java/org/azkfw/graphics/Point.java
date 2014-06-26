@@ -91,4 +91,51 @@ public final class Point {
 		return y;
 	}
 
+	/**
+	 * X値に値を加算する。
+	 * 
+	 * @param aValue 加算値
+	 */
+	public void addX(final float aValue) {
+		x += aValue;
+	}
+
+	/**
+	 * Y値に値を加算する。
+	 * 
+	 * @param aValue 加算値
+	 */
+	public void addY(final float aValue) {
+		y += aValue;
+	}
+
+	/**
+	 * X値に値を除算する。
+	 * 
+	 * @param aValue 除算値
+	 */
+	public void subtractX(final float aValue) {
+		x -= aValue;
+	}
+
+	/**
+	 * Y値に値を除算する。
+	 * 
+	 * @param aValue 除算値
+	 */
+	public void subtractY(final float aValue) {
+		y -= aValue;
+	}
+
+	/**
+	 * X値、Y値それぞれに値を加算する。
+	 * 
+	 * @param aX X値
+	 * @param aY Y値
+	 */
+	public void add(final float aX, final float aY) {
+		x += aX;
+		y += aY;
+	}
+
 }
