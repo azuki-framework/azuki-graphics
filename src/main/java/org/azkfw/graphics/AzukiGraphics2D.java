@@ -23,6 +23,7 @@ import java.awt.FontMetrics;
 import java.awt.GradientPaint;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
+import java.awt.Shape;
 import java.awt.Stroke;
 
 /**
@@ -81,6 +82,10 @@ public class AzukiGraphics2D implements Graphics {
 		graphics.setColor(aColor);
 	}
 
+	public void setClip(final Shape aShape) {
+		graphics.setClip(aShape);
+	}
+
 	public void setClip(final float aX, final float aY, final float aWidth, final float aHeight) {
 		graphics.setClip((int) aX, (int) aY, (int) aWidth, (int) aHeight);
 	}
@@ -128,6 +133,14 @@ public class AzukiGraphics2D implements Graphics {
 		graphics.drawPolygon(xPoints, yPoints, aNPoints);
 	}
 
+	public void fillPolygon(final Polygon aPolygon) {
+		graphics.fillPolygon(aPolygon);
+	}
+
+	public void fillPolygon(final int[] aXPoints, final int[] aYPoints, final int aNPoints) {
+		graphics.fillPolygon(aXPoints, aYPoints, aNPoints);
+	}
+
 	public void fillPolygon(final float[] aXPoints, final float[] aYPoints, final int aNPoints) {
 		int[] xPoints = new int[aNPoints];
 		int[] yPoints = new int[aNPoints];
@@ -138,8 +151,8 @@ public class AzukiGraphics2D implements Graphics {
 		graphics.fillPolygon(xPoints, yPoints, aNPoints);
 	}
 
-	public void fillPolygon(final Polygon aPolygon) {
-		graphics.fillPolygon(aPolygon);
+	public void drawPolyline(final int[] aXPoints, final int[] aYPoints, final int aNPoints) {
+		graphics.drawPolyline(aXPoints, aYPoints, aNPoints);
 	}
 
 	public void drawPolyline(final float[] aXPoints, final float[] aYPoints, final int aNPoints) {

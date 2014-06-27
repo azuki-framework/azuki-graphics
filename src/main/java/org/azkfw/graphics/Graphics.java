@@ -22,6 +22,7 @@ import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.GradientPaint;
 import java.awt.Polygon;
+import java.awt.Shape;
 import java.awt.Stroke;
 
 /**
@@ -45,6 +46,8 @@ public interface Graphics {
 
 	public void setStroke(final Stroke aStroke, final Color aColor);
 
+	public void setClip(final Shape aShape);
+
 	public void setClip(final float aX, final float aY, final float aWidth, final float aHeight);
 
 	public void clearClip();
@@ -65,9 +68,13 @@ public interface Graphics {
 
 	public void drawPolygon(final float[] aXPoints, final float[] aYPoints, final int aNPoints);
 
+	public void fillPolygon(final Polygon aPolygon);
+
+	public void fillPolygon(final int[] aXPoints, final int[] aYPoints, final int aNPoints);
+
 	public void fillPolygon(final float[] aXPoints, final float[] aYPoints, final int aNPoints);
 
-	public void fillPolygon(final Polygon aPolygon);
+	public void drawPolyline(final int[] aXPoints, final int[] aYPoints, final int aNPoints);
 
 	public void drawPolyline(final float[] aXPoints, final float[] aYPoints, final int aNPoints);
 
