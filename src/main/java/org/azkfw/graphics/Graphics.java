@@ -58,7 +58,11 @@ public interface Graphics {
 
 	public void drawLine(final float aX1, final float aY1, final float aX2, final float aY2);
 
+	public void drawRect(final Rect aRect);
+
 	public void drawRect(final float aX, final float aY, final float aWidth, final float aHeight);
+
+	public void fillRect(final Rect aRect);
 
 	public void fillRect(final float aX, final float aY, final float aWidth, final float aHeight);
 

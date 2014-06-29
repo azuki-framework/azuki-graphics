@@ -107,8 +107,16 @@ public class AzukiGraphics2D implements Graphics {
 		graphics.drawLine((int) aX1, (int) aY1, (int) aX2, (int) aY2);
 	}
 
+	public void drawRect(final Rect aRect) {
+		drawRect(aRect.getX(), aRect.getY(), aRect.getWidth(), aRect.getHeight());
+	}
+
 	public void drawRect(final float aX, final float aY, final float aWidth, final float aHeight) {
 		graphics.drawRect((int) aX, (int) aY, (int) aWidth, (int) aHeight);
+	}
+
+	public void fillRect(final Rect aRect) {
+		fillRect(aRect.getX(), aRect.getY(), aRect.getWidth(), aRect.getHeight());
 	}
 
 	public void fillRect(final float aX, final float aY, final float aWidth, final float aHeight) {
