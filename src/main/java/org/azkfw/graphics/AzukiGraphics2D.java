@@ -22,6 +22,7 @@ import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.GradientPaint;
 import java.awt.Graphics2D;
+import java.awt.Paint;
 import java.awt.Polygon;
 import java.awt.Shape;
 import java.awt.Stroke;
@@ -268,7 +269,7 @@ public class AzukiGraphics2D implements Graphics {
 	}
 
 	@Override
-	public void setPaint(final GradientPaint aPaint) {
+	public void setPaint(final Paint aPaint) {
 		graphics.setPaint(aPaint);
 	}
 

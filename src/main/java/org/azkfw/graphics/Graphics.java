@@ -20,7 +20,7 @@ package org.azkfw.graphics;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.FontMetrics;
-import java.awt.GradientPaint;
+import java.awt.Paint;
 import java.awt.Polygon;
 import java.awt.Shape;
 import java.awt.Stroke;
@@ -50,7 +50,7 @@ public interface Graphics {
 	public void setClip(final Shape aShape);
 
 	public void setClip(final float aX, final float aY, final float aWidth, final float aHeight);
-	
+
 	public void setClip(final Rect aRect);
 
 	public void clearClip();
@@ -101,6 +101,6 @@ public interface Graphics {
 
 	public void drawPolyline(final List<Point> aPoints);
 
-	public void setPaint(final GradientPaint aPaint);
+	public void setPaint(final Paint aPaint);
 
 }
