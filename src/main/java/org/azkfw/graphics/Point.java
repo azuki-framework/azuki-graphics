@@ -26,14 +26,10 @@ package org.azkfw.graphics;
  */
 public final class Point {
 
-	/**
-	 * X値
-	 */
+	/** X座標 */
 	private float x;
 
-	/**
-	 * Y値
-	 */
+	/** Y座標 */
 	private float y;
 
 	/**
@@ -47,10 +43,31 @@ public final class Point {
 	/**
 	 * コンストラクタ
 	 * 
-	 * @param aX X値
-	 * @param aY Y値
+	 * @param aPoint Point情報
+	 */
+	public Point(final Point aPoint) {
+		x = aPoint.x;
+		y = aPoint.y;
+	}
+
+	/**
+	 * コンストラクタ
+	 * 
+	 * @param aX X座標
+	 * @param aY Y座標
 	 */
 	public Point(final float aX, final float aY) {
+		x = aX;
+		y = aY;
+	}
+
+	/**
+	 * コンストラクタ
+	 * 
+	 * @param aX X座標
+	 * @param aY Y座標
+	 */
+	public Point(final int aX, final int aY) {
 		x = aX;
 		y = aY;
 	}
@@ -138,4 +155,14 @@ public final class Point {
 		y += aY;
 	}
 
+	/**
+	 * X値、Y値それぞれに値を除算する。
+	 * 
+	 * @param aX X値
+	 * @param aY Y値
+	 */
+	public void subtract(final float aX, final float aY) {
+		x -= aX;
+		y -= aY;
+	}
 }

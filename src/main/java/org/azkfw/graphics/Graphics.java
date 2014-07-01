@@ -24,6 +24,7 @@ import java.awt.GradientPaint;
 import java.awt.Polygon;
 import java.awt.Shape;
 import java.awt.Stroke;
+import java.util.List;
 
 /**
  * このインターフェースは、グラフィクス機能を表現するインターフェースです。
@@ -49,14 +50,22 @@ public interface Graphics {
 	public void setClip(final Shape aShape);
 
 	public void setClip(final float aX, final float aY, final float aWidth, final float aHeight);
+	
+	public void setClip(final Rect aRect);
 
 	public void clearClip();
 
 	public void drawString(final String aString, final float aX, final float aY);
 
+	public void drawString(final String aString, final Point aPoint);
+
 	public void drawStringA(final String aString, final float aX, final float aY);
 
+	public void drawStringA(final String aString, final Point aPoint);
+
 	public void drawLine(final float aX1, final float aY1, final float aX2, final float aY2);
+
+	public void drawLine(final Point aPoint1, final Point aPoint2);
 
 	public void drawRect(final Rect aRect);
 
@@ -68,9 +77,15 @@ public interface Graphics {
 
 	public void drawArc(final float aX, final float aY, final float aWidth, final float aHeight, final float aStartAngle, final float aArcAngle);
 
+	public void drawArc(final Rect aRect, final float aStartAngle, final float aArcAngle);
+
 	public void fillArc(final float aX, final float aY, final float aWidth, final float aHeight, final float aStartAngle, final float aArcAngle);
 
+	public void fillArc(final Rect aRect, final float aStartAngle, final float aArcAngle);
+
 	public void drawPolygon(final float[] aXPoints, final float[] aYPoints, final int aNPoints);
+
+	public void drawPolygon(final List<Point> aPoints);
 
 	public void fillPolygon(final Polygon aPolygon);
 
@@ -78,9 +93,13 @@ public interface Graphics {
 
 	public void fillPolygon(final float[] aXPoints, final float[] aYPoints, final int aNPoints);
 
+	public void fillPolygon(final List<Point> aPoints);
+
 	public void drawPolyline(final int[] aXPoints, final int[] aYPoints, final int aNPoints);
 
 	public void drawPolyline(final float[] aXPoints, final float[] aYPoints, final int aNPoints);
+
+	public void drawPolyline(final List<Point> aPoints);
 
 	public void setPaint(final GradientPaint aPaint);
 

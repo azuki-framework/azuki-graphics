@@ -26,23 +26,48 @@ package org.azkfw.graphics;
  */
 public final class Size {
 
+	/** 横幅 */
 	private float width;
+
+	/** 縦幅 */
 	private float height;
 
 	/**
 	 * コンストラクタ
 	 */
 	public Size() {
-
+		width = 0.f;
+		height = 0.f;
 	}
 
 	/**
 	 * コンストラクタ
 	 * 
-	 * @param aWidth width
-	 * @param aHeight height
+	 * @param aSize Size情報
+	 */
+	public Size(final Size aSize) {
+		width = aSize.width;
+		height = aSize.height;
+	}
+
+	/**
+	 * コンストラクタ
+	 * 
+	 * @param aWidth 横幅
+	 * @param aHeight 縦幅
 	 */
 	public Size(final float aWidth, final float aHeight) {
+		width = aWidth;
+		height = aHeight;
+	}
+
+	/**
+	 * コンストラクタ
+	 * 
+	 * @param aWidth 横幅
+	 * @param aHeight 縦幅
+	 */
+	public Size(final int aWidth, final int aHeight) {
 		width = aWidth;
 		height = aHeight;
 	}
@@ -86,7 +111,7 @@ public final class Size {
 	/**
 	 * 横幅に値を加算する。
 	 * 
-	 * @param aValue 加算値
+	 * @param aValue 値
 	 */
 	public void addWidth(final float aValue) {
 		width += aValue;
@@ -95,7 +120,7 @@ public final class Size {
 	/**
 	 * 縦幅に値を加算する。
 	 * 
-	 * @param aValue 加算値
+	 * @param aValue 値
 	 */
 	public void addHeight(final float aValue) {
 		height += aValue;
@@ -104,7 +129,7 @@ public final class Size {
 	/**
 	 * 横幅に値を除算する。
 	 * 
-	 * @param aValue 除算値
+	 * @param aValue 値
 	 */
 	public void subtractWidth(final float aValue) {
 		width -= aValue;
@@ -113,20 +138,31 @@ public final class Size {
 	/**
 	 * 縦幅に値を除算する。
 	 * 
-	 * @param aValue 除算値
+	 * @param aValue 値
 	 */
 	public void subtractHeight(final float aValue) {
 		height -= aValue;
 	}
-	
+
 	/**
-	 * 横幅、縦幅それぞれに値を加算する。
+	 * 横幅、縦幅それぞれに値を除算する。
 	 * 
-	 * @param aWidth 横幅
-	 * @param aHeight 縦幅
+	 * @param aWidth 値
+	 * @param aHeight 値
 	 */
 	public void add(final float aWidth, final float aHeight) {
 		width += aWidth;
 		height += aHeight;
+	}
+
+	/**
+	 * 横幅、縦幅それぞれに値を除算する。
+	 * 
+	 * @param aWidth 値
+	 * @param aHeight 値
+	 */
+	public void subtract(final float aWidth, final float aHeight) {
+		width -= aWidth;
+		height -= aHeight;
 	}
 }
