@@ -24,6 +24,7 @@ import java.awt.Paint;
 import java.awt.Polygon;
 import java.awt.Shape;
 import java.awt.Stroke;
+import java.awt.geom.AffineTransform;
 import java.util.List;
 
 /**
@@ -46,6 +47,10 @@ public interface Graphics {
 	public void setStroke(final Stroke aStroke);
 
 	public void setStroke(final Stroke aStroke, final Color aColor);
+
+	public AffineTransform getTransform();
+
+	public void setTransform(final AffineTransform aTransform);
 
 	public void setClip(final Shape aShape);
 

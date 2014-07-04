@@ -25,6 +25,7 @@ import java.awt.Paint;
 import java.awt.Polygon;
 import java.awt.Shape;
 import java.awt.Stroke;
+import java.awt.geom.AffineTransform;
 import java.util.List;
 
 /**
@@ -87,6 +88,16 @@ public class AzukiGraphics2D implements Graphics {
 	public void setStroke(final Stroke aStroke, final Color aColor) {
 		graphics.setStroke(aStroke);
 		graphics.setColor(aColor);
+	}
+
+	@Override
+	public AffineTransform getTransform() {
+		return graphics.getTransform();
+	}
+
+	@Override
+	public void setTransform(final AffineTransform aTransform) {
+		graphics.setTransform(aTransform);
 	}
 
 	@Override
