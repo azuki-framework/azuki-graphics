@@ -133,7 +133,7 @@ public class AzukiGraphics2D implements Graphics {
 	@Override
 	public void drawStringA(final String aString, final float aX, final float aY) {
 		FontMetrics fm = graphics.getFontMetrics();
-		graphics.drawString(aString, (int) aX, (int) (aY + fm.getMaxAscent()));
+		graphics.drawString(aString, (int) aX, (int) (aY + (fm.getAscent() - fm.getDescent())));
 	}
 
 	@Override
