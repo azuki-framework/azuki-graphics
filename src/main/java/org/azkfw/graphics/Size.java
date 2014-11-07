@@ -56,7 +56,7 @@ public final class Size {
 	 * @param aWidth 横幅
 	 * @param aHeight 縦幅
 	 */
-	public Size(final float aWidth, final float aHeight) {
+	public Size(final int aWidth, final int aHeight) {
 		width = aWidth;
 		height = aHeight;
 	}
@@ -67,9 +67,40 @@ public final class Size {
 	 * @param aWidth 横幅
 	 * @param aHeight 縦幅
 	 */
-	public Size(final int aWidth, final int aHeight) {
+	public Size(final float aWidth, final float aHeight) {
 		width = aWidth;
 		height = aHeight;
+	}
+
+	/**
+	 * サイズを指定する。
+	 * 
+	 * @param aWidth 横幅
+	 * @param aHeight 縦幅
+	 */
+	public void set(final int aWidth, final int aHeight) {
+		width = aWidth;
+		height = aHeight;
+	}
+
+	/**
+	 * サイズを指定する。
+	 * 
+	 * @param aWidth 横幅
+	 * @param aHeight 縦幅
+	 */
+	public void set(final float aWidth, final float aHeight) {
+		width = aWidth;
+		height = aHeight;
+	}
+
+	/**
+	 * 横幅を設定する。
+	 * 
+	 * @param aWidth 横幅
+	 */
+	public void setWidth(final int aWidth) {
+		width = aWidth;
 	}
 
 	/**
@@ -82,12 +113,12 @@ public final class Size {
 	}
 
 	/**
-	 * 横幅を取得する。
+	 * 縦幅を設定する。
 	 * 
-	 * @return 横幅
+	 * @param aHeight 縦幅
 	 */
-	public float getWidth() {
-		return width;
+	public void setHeight(final int aHeight) {
+		height = aHeight;
 	}
 
 	/**
@@ -100,6 +131,15 @@ public final class Size {
 	}
 
 	/**
+	 * 横幅を取得する。
+	 * 
+	 * @return 横幅
+	 */
+	public float getWidth() {
+		return width;
+	}
+
+	/**
 	 * 縦幅を取得する。
 	 * 
 	 * @return 縦幅
@@ -109,9 +149,60 @@ public final class Size {
 	}
 
 	/**
+	 * サイズに値を加算する。
+	 * 
+	 * @param aValue 加算する値
+	 */
+	public void add(final int aValue) {
+		width += aValue;
+		height += aValue;
+	}
+
+	/**
+	 * サイズに値を加算する。
+	 * 
+	 * @param aValue 加算する値
+	 */
+	public void add(final float aValue) {
+		width += aValue;
+		height += aValue;
+	}
+
+	/**
+	 * サイズに値を加算する。
+	 * 
+	 * @param aWidth 横幅に加算する値
+	 * @param aHeight 縦幅に加算する値
+	 */
+	public void add(final int aWidth, final int aHeight) {
+		width += aWidth;
+		height += aHeight;
+	}
+
+	/**
+	 * サイズに値を加算する。
+	 * 
+	 * @param aWidth 横幅に加算する値
+	 * @param aHeight 縦幅に加算する値
+	 */
+	public void add(final float aWidth, final float aHeight) {
+		width += aWidth;
+		height += aHeight;
+	}
+
+	/**
 	 * 横幅に値を加算する。
 	 * 
-	 * @param aValue 値
+	 * @param aValue 加算する値
+	 */
+	public void addWidth(final int aValue) {
+		width += aValue;
+	}
+
+	/**
+	 * 横幅に値を加算する。
+	 * 
+	 * @param aValue 加算する値
 	 */
 	public void addWidth(final float aValue) {
 		width += aValue;
@@ -120,49 +211,252 @@ public final class Size {
 	/**
 	 * 縦幅に値を加算する。
 	 * 
-	 * @param aValue 値
+	 * @param aValue 加算する値
+	 */
+	public void addHeight(final int aValue) {
+		height += aValue;
+	}
+
+	/**
+	 * 縦幅に値を加算する。
+	 * 
+	 * @param aValue 加算する値
 	 */
 	public void addHeight(final float aValue) {
 		height += aValue;
 	}
 
 	/**
-	 * 横幅に値を除算する。
+	 * サイズに値を減算する。
 	 * 
-	 * @param aValue 値
+	 * @param aValue 減算する値
+	 */
+	public void subtract(final int aValue) {
+		width -= aValue;
+		height -= aValue;
+	}
+
+	/**
+	 * サイズに値を減算する。
+	 * 
+	 * @param aValue 減算する値
+	 */
+	public void subtract(final float aValue) {
+		width -= aValue;
+		height -= aValue;
+	}
+
+	/**
+	 * サイズに値を減算する。
+	 * 
+	 * @param aWidth 横幅に減算する値
+	 * @param aHeight 縦幅に減算する値
+	 */
+	public void subtract(final int aWidth, final int aHeight) {
+		width -= aWidth;
+		height -= aHeight;
+	}
+
+	/**
+	 * サイズに値を減算する。
+	 * 
+	 * @param aWidth 横幅に減算する値
+	 * @param aHeight 縦幅に減算する値
+	 */
+	public void subtract(final float aWidth, final float aHeight) {
+		width -= aWidth;
+		height -= aHeight;
+	}
+
+	/**
+	 * 横幅に値を減算する。
+	 * 
+	 * @param aValue 減算する値
+	 */
+	public void subtractWidth(final int aValue) {
+		width -= aValue;
+	}
+
+	/**
+	 * 横幅に値を減算する。
+	 * 
+	 * @param aValue 減算する値
 	 */
 	public void subtractWidth(final float aValue) {
 		width -= aValue;
 	}
 
 	/**
-	 * 縦幅に値を除算する。
+	 * 縦幅に値を減算する。
 	 * 
-	 * @param aValue 値
+	 * @param aValue 減算する値
+	 */
+	public void subtractHeight(final int aValue) {
+		height -= aValue;
+	}
+
+	/**
+	 * 縦幅に値を減算する。
+	 * 
+	 * @param aValue 減算する値
 	 */
 	public void subtractHeight(final float aValue) {
 		height -= aValue;
 	}
 
 	/**
-	 * 横幅、縦幅それぞれに値を除算する。
+	 * サイズに値を乗算する。
 	 * 
-	 * @param aWidth 値
-	 * @param aHeight 値
+	 * @param aValue 乗算する値
 	 */
-	public void add(final float aWidth, final float aHeight) {
-		width += aWidth;
-		height += aHeight;
+	public void multiply(final int aValue) {
+		width *= aValue;
+		height *= aValue;
 	}
 
 	/**
-	 * 横幅、縦幅それぞれに値を除算する。
+	 * サイズに値を乗算する。
 	 * 
-	 * @param aWidth 値
-	 * @param aHeight 値
+	 * @param aValue 乗算する値
 	 */
-	public void subtract(final float aWidth, final float aHeight) {
-		width -= aWidth;
-		height -= aHeight;
+	public void multiply(final float aValue) {
+		width *= aValue;
+		height *= aValue;
+	}
+
+	/**
+	 * サイズに値を乗算する。
+	 * 
+	 * @param aWidth 横幅に乗算する値
+	 * @param aHeight 縦幅に乗算する値
+	 */
+	public void multiply(final int aWidth, final int aHeight) {
+		width *= aWidth;
+		height *= aHeight;
+	}
+
+	/**
+	 * サイズに値を乗算する。
+	 * 
+	 * @param aWidth 横幅に乗算する値
+	 * @param aHeight 縦幅に乗算する値
+	 */
+	public void multiply(final float aWidth, final float aHeight) {
+		width *= aWidth;
+		height *= aHeight;
+	}
+
+	/**
+	 * 横幅に値を乗算する。
+	 * 
+	 * @param aValue 乗算する値
+	 */
+	public void multiplyWidth(final int aValue) {
+		width *= aValue;
+	}
+
+	/**
+	 * 横幅に値を乗算する。
+	 * 
+	 * @param aValue 乗算する値
+	 */
+	public void multiplyWidth(final float aValue) {
+		width *= aValue;
+	}
+
+	/**
+	 * 縦幅に値を乗算する。
+	 * 
+	 * @param aValue 乗算する値
+	 */
+	public void multiplyHeight(final int aValue) {
+		height *= aValue;
+	}
+
+	/**
+	 * 縦幅に値を乗算する。
+	 * 
+	 * @param aValue 乗算する値
+	 */
+	public void multiplyHeight(final float aValue) {
+		height *= aValue;
+	}
+
+	/**
+	 * サイズに値を除算する。
+	 * 
+	 * @param aValue 除算する値
+	 */
+	public void divide(final int aValue) {
+		width /= aValue;
+		height /= aValue;
+	}
+
+	/**
+	 * サイズに値を除算する。
+	 * 
+	 * @param aValue 除算する値
+	 */
+	public void divide(final float aValue) {
+		width /= aValue;
+		height /= aValue;
+	}
+
+	/**
+	 * サイズに値を除算する。
+	 * 
+	 * @param aWidth 横幅に除算する値
+	 * @param aHeight 縦幅に除算する値
+	 */
+	public void divide(final int aWidth, final int aHeight) {
+		width /= aWidth;
+		height /= aHeight;
+	}
+
+	/**
+	 * サイズに値を除算する。
+	 * 
+	 * @param aWidth 横幅に除算する値
+	 * @param aHeight 縦幅に除算する値
+	 */
+	public void divide(final float aWidth, final float aHeight) {
+		width /= aWidth;
+		height /= aHeight;
+	}
+
+	/**
+	 * 横幅に値を除算する。
+	 * 
+	 * @param aValue 除算する値
+	 */
+	public void divideWidth(final int aValue) {
+		width /= aValue;
+	}
+
+	/**
+	 * 横幅に値を除算する。
+	 * 
+	 * @param aValue 除算する値
+	 */
+	public void divideWidth(final float aValue) {
+		width /= aValue;
+	}
+
+	/**
+	 * 縦幅に値を除算する。
+	 * 
+	 * @param aValue 除算する値
+	 */
+	public void divideHeight(final int aValue) {
+		height /= aValue;
+	}
+
+	/**
+	 * 縦幅に値を除算する。
+	 * 
+	 * @param aValue 除算する値
+	 */
+	public void divideHeight(final float aValue) {
+		height /= aValue;
 	}
 }

@@ -64,6 +64,21 @@ public class Padding {
 	 * @param aLeft 左部パディング値
 	 * @param aRight 右部パディング値
 	 */
+	public Padding(final int aTop, final int aBottom, final int aLeft, final int aRight) {
+		top = aTop;
+		bottom = aBottom;
+		left = aLeft;
+		right = aRight;
+	}
+
+	/**
+	 * コンストラクタ
+	 * 
+	 * @param aTop 上部パディング値
+	 * @param aBottom 下部パディング値
+	 * @param aLeft 左部パディング値
+	 * @param aRight 右部パディング値
+	 */
 	public Padding(final float aTop, final float aBottom, final float aLeft, final float aRight) {
 		top = aTop;
 		bottom = aBottom;
@@ -146,7 +161,7 @@ public class Padding {
 	/**
 	 * 上部パディング値に値を加算する。
 	 * 
-	 * @param aValue 加算値
+	 * @param aValue 加算する値
 	 */
 	public void addTop(final float aValue) {
 		top += aValue;
@@ -155,7 +170,7 @@ public class Padding {
 	/**
 	 * 下部パディング値に値を加算する。
 	 * 
-	 * @param aValue 加算値
+	 * @param aValue 加算する値
 	 */
 	public void addBottom(final float aValue) {
 		bottom += aValue;
@@ -164,7 +179,7 @@ public class Padding {
 	/**
 	 * 左部パディング値に値を加算する。
 	 * 
-	 * @param aValue 加算値
+	 * @param aValue 加算する値
 	 */
 	public void addLeft(final float aValue) {
 		left += aValue;
@@ -173,43 +188,43 @@ public class Padding {
 	/**
 	 * 右部パディング値に値を加算する。
 	 * 
-	 * @param aValue 加算値
+	 * @param aValue 加算する値
 	 */
 	public void addRight(final float aValue) {
 		right += aValue;
 	}
-	
+
 	/**
-	 * 上部パディング値に値を除算する。
+	 * 上部パディング値に値を減算する。
 	 * 
-	 * @param aValue 除算値
+	 * @param aValue 減算する値
 	 */
 	public void subtractTop(final float aValue) {
 		top -= aValue;
 	}
 
 	/**
-	 * 下部パディング値に値を除算する。
+	 * 下部パディング値に値を減算する。
 	 * 
-	 * @param aValue 除算値
+	 * @param aValue 減算する値
 	 */
 	public void subtractBottom(final float aValue) {
 		bottom -= aValue;
 	}
 
 	/**
-	 * 左部パディング値に値を除算する。
+	 * 左部パディング値に値を減算する。
 	 * 
-	 * @param aValue 除算値
+	 * @param aValue 減算する値
 	 */
 	public void subtractLeft(final float aValue) {
 		left -= aValue;
 	}
 
 	/**
-	 * 右部パディング値に値を除算する。
+	 * 右部パディング値に値を減算する。
 	 * 
-	 * @param aValue 除算値
+	 * @param aValue 減算する値
 	 */
 	public void subtractRight(final float aValue) {
 		right -= aValue;

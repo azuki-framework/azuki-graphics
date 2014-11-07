@@ -64,6 +64,21 @@ public class Margin {
 	 * @param aLeft 左部マージン値
 	 * @param aRight 右部マージン値
 	 */
+	public Margin(final int aTop, final int aBottom, final int aLeft, final int aRight) {
+		top = aTop;
+		bottom = aBottom;
+		left = aLeft;
+		right = aRight;
+	}
+
+	/**
+	 * コンストラクタ
+	 * 
+	 * @param aTop 上部マージン値
+	 * @param aBottom 下部マージン値
+	 * @param aLeft 左部マージン値
+	 * @param aRight 右部マージン値
+	 */
 	public Margin(final float aTop, final float aBottom, final float aLeft, final float aRight) {
 		top = aTop;
 		bottom = aBottom;
@@ -146,7 +161,7 @@ public class Margin {
 	/**
 	 * 上部マージン値に値を加算する。
 	 * 
-	 * @param aValue 加算値
+	 * @param aValue 加算する値
 	 */
 	public void addTop(final float aValue) {
 		top += aValue;
@@ -155,7 +170,7 @@ public class Margin {
 	/**
 	 * 下部マージン値に値を加算する。
 	 * 
-	 * @param aValue 加算値
+	 * @param aValue 加算する値
 	 */
 	public void addBottom(final float aValue) {
 		bottom += aValue;
@@ -164,7 +179,7 @@ public class Margin {
 	/**
 	 * 左部マージン値に値を加算する。
 	 * 
-	 * @param aValue 加算値
+	 * @param aValue 加算する値
 	 */
 	public void addLeft(final float aValue) {
 		left += aValue;
@@ -173,16 +188,16 @@ public class Margin {
 	/**
 	 * 右部マージン値に値を加算する。
 	 * 
-	 * @param aValue 加算値
+	 * @param aValue 加算する値
 	 */
 	public void addRight(final float aValue) {
 		right += aValue;
 	}
-	
+
 	/**
 	 * 上部マージン値に値を減算する。
 	 * 
-	 * @param aValue 減算値
+	 * @param aValue 減算する値
 	 */
 	public void subtractTop(final float aValue) {
 		top -= aValue;
@@ -191,7 +206,7 @@ public class Margin {
 	/**
 	 * 下部マージン値に値を減算する。
 	 * 
-	 * @param aValue 減算値
+	 * @param aValue 減算する値
 	 */
 	public void subtractBottom(final float aValue) {
 		bottom -= aValue;
@@ -200,7 +215,7 @@ public class Margin {
 	/**
 	 * 左部マージン値に値を減算する。
 	 * 
-	 * @param aValue 減算値
+	 * @param aValue 減算する値
 	 */
 	public void subtractLeft(final float aValue) {
 		left -= aValue;
@@ -209,7 +224,7 @@ public class Margin {
 	/**
 	 * 右部マージン値に値を減算する。
 	 * 
-	 * @param aValue 減算値
+	 * @param aValue 減算する値
 	 */
 	public void subtractRight(final float aValue) {
 		right -= aValue;

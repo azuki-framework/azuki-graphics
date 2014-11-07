@@ -56,7 +56,7 @@ public final class Point {
 	 * @param aX X座標
 	 * @param aY Y座標
 	 */
-	public Point(final float aX, final float aY) {
+	public Point(final int aX, final int aY) {
 		x = aX;
 		y = aY;
 	}
@@ -67,88 +67,123 @@ public final class Point {
 	 * @param aX X座標
 	 * @param aY Y座標
 	 */
-	public Point(final int aX, final int aY) {
+	public Point(final float aX, final float aY) {
 		x = aX;
 		y = aY;
 	}
 
 	/**
-	 * X値を設定する。
+	 * 位置を指定する。
 	 * 
-	 * @param aX X値
+	 * @param aX X座標
+	 * @param aY Y座標
+	 */
+	public void set(final int aX, final int aY) {
+		x = aX;
+		y = aY;
+	}
+
+	/**
+	 * 位置を指定する。
+	 * 
+	 * @param aX X座標
+	 * @param aY Y座標
+	 */
+	public void set(final float aX, final float aY) {
+		x = aX;
+		y = aY;
+	}
+
+	/**
+	 * X座標を設定する。
+	 * 
+	 * @param aX X座標
+	 */
+	public void setX(final int aX) {
+		x = aX;
+	}
+
+	/**
+	 * X座標を設定する。
+	 * 
+	 * @param aX X座標
 	 */
 	public void setX(final float aX) {
 		x = aX;
 	}
 
 	/**
-	 * X値を取得する。
+	 * Y座標を設定する。
 	 * 
-	 * @return Y値
+	 * @param aY Y座標
 	 */
-	public float getX() {
-		return x;
+	public void setY(final int aY) {
+		y = aY;
 	}
 
 	/**
-	 * Y値を設定する。
+	 * Y座標を設定する。
 	 * 
-	 * @param aY Y値
+	 * @param aY Y座標
 	 */
 	public void setY(final float aY) {
 		y = aY;
 	}
 
 	/**
-	 * Y値を取得する。
+	 * X座標を取得する。
 	 * 
-	 * @return Y値
+	 * @return X座標
+	 */
+	public float getX() {
+		return x;
+	}
+
+	/**
+	 * Y座標を取得する。
+	 * 
+	 * @return Y座標
 	 */
 	public float getY() {
 		return y;
 	}
 
 	/**
-	 * X値に値を加算する。
+	 * 位置に値を加算する。
 	 * 
-	 * @param aValue 加算値
+	 * @param aValue 加算する値
 	 */
-	public void addX(final float aValue) {
+	public void add(final int aValue) {
 		x += aValue;
-	}
-
-	/**
-	 * Y値に値を加算する。
-	 * 
-	 * @param aValue 加算値
-	 */
-	public void addY(final float aValue) {
 		y += aValue;
 	}
 
 	/**
-	 * X値に値を除算する。
+	 * 位置に値を加算する。
 	 * 
-	 * @param aValue 除算値
+	 * @param aValue 加算する値
 	 */
-	public void subtractX(final float aValue) {
-		x -= aValue;
+	public void add(final float aValue) {
+		x += aValue;
+		y += aValue;
 	}
 
 	/**
-	 * Y値に値を除算する。
+	 * 位置に値を加算する。
 	 * 
-	 * @param aValue 除算値
+	 * @param aX X座標に加算する値
+	 * @param aY Y座標に加算する値
 	 */
-	public void subtractY(final float aValue) {
-		y -= aValue;
+	public void add(final int aX, final int aY) {
+		x += aX;
+		y += aY;
 	}
 
 	/**
-	 * X値、Y値それぞれに値を加算する。
+	 * 位置に値を加算する。
 	 * 
-	 * @param aX X値
-	 * @param aY Y値
+	 * @param aX X座標に加算する値
+	 * @param aY Y座標に加算する値
 	 */
 	public void add(final float aX, final float aY) {
 		x += aX;
@@ -156,13 +191,272 @@ public final class Point {
 	}
 
 	/**
-	 * X値、Y値それぞれに値を除算する。
+	 * X座標に値を加算する。
 	 * 
-	 * @param aX X値
-	 * @param aY Y値
+	 * @param aValue 加算する値
+	 */
+	public void addX(final int aValue) {
+		x += aValue;
+	}
+
+	/**
+	 * X座標に値を加算する。
+	 * 
+	 * @param aValue 加算する値
+	 */
+	public void addX(final float aValue) {
+		x += aValue;
+	}
+
+	/**
+	 * Y座標に値を加算する。
+	 * 
+	 * @param aValue 加算する値
+	 */
+	public void addY(final int aValue) {
+		y += aValue;
+	}
+
+	/**
+	 * Y座標に値を加算する。
+	 * 
+	 * @param aValue 加算する値
+	 */
+	public void addY(final float aValue) {
+		y += aValue;
+	}
+
+	/**
+	 * 位置に値を減算する。
+	 * 
+	 * @param aValue 減算する値
+	 */
+	public void subtract(final int aValue) {
+		x += aValue;
+		y += aValue;
+	}
+
+	/**
+	 * 位置に値を減算する。
+	 * 
+	 * @param aValue 減算する値
+	 */
+	public void subtract(final float aValue) {
+		x += aValue;
+		y += aValue;
+	}
+
+	/**
+	 * 位置に値を減算する。
+	 * 
+	 * @param aX X座標に減算する値
+	 * @param aY Y座標に減算する値
+	 */
+	public void subtract(final int aX, final int aY) {
+		x += aX;
+		y += aY;
+	}
+
+	/**
+	 * 位置に値を減算する。
+	 * 
+	 * @param aX X座標に減算する値
+	 * @param aY Y座標に減算する値
 	 */
 	public void subtract(final float aX, final float aY) {
-		x -= aX;
-		y -= aY;
+		x += aX;
+		y += aY;
+	}
+
+	/**
+	 * X座標に値を減算する。
+	 * 
+	 * @param aValue 減算する値
+	 */
+	public void subtractX(final int aValue) {
+		x -= aValue;
+	}
+
+	/**
+	 * X座標に値を減算する。
+	 * 
+	 * @param aValue 減算する値
+	 */
+	public void subtractX(final float aValue) {
+		x -= aValue;
+	}
+
+	/**
+	 * Y座標に値を減算する。
+	 * 
+	 * @param aValue 減算する値
+	 */
+	public void subtractY(final int aValue) {
+		y -= aValue;
+	}
+
+	/**
+	 * Y座標に値を減算する。
+	 * 
+	 * @param aValue 減算する値
+	 */
+	public void subtractY(final float aValue) {
+		y -= aValue;
+	}
+
+	/**
+	 * 位置に値を乗算する。
+	 * 
+	 * @param aValue 乗算する値
+	 */
+	public void multiply(final int aValue) {
+		x *= aValue;
+		y *= aValue;
+	}
+
+	/**
+	 * 位置に値を乗算する。
+	 * 
+	 * @param aValue 乗算する値
+	 */
+	public void multiply(final float aValue) {
+		x *= aValue;
+		y *= aValue;
+	}
+
+	/**
+	 * 位置に値を乗算する。
+	 * 
+	 * @param aX X座標に乗算する値
+	 * @param aY Y座標に乗算する値
+	 */
+	public void multiply(final int aX, final int aY) {
+		x *= aX;
+		y *= aY;
+	}
+
+	/**
+	 * 位置に値を乗算する。
+	 * 
+	 * @param aX X座標に乗算する値
+	 * @param aY Y座標に乗算する値
+	 */
+	public void multiply(final float aX, final float aY) {
+		x *= aX;
+		y *= aY;
+	}
+
+	/**
+	 * X座標に値を乗算する。
+	 * 
+	 * @param aValue 乗算する値
+	 */
+	public void multiplyX(final int aValue) {
+		x *= aValue;
+	}
+
+	/**
+	 * X座標に値を乗算する。
+	 * 
+	 * @param aValue 乗算する値
+	 */
+	public void multiplyX(final float aValue) {
+		x *= aValue;
+	}
+
+	/**
+	 * Y座標に値を乗算する。
+	 * 
+	 * @param aValue 乗算する値
+	 */
+	public void multiplyY(final int aValue) {
+		y *= aValue;
+	}
+
+	/**
+	 * Y座標に値を乗算する。
+	 * 
+	 * @param aValue 乗算する値
+	 */
+	public void multiplyY(final float aValue) {
+		y *= aValue;
+	}
+
+	/**
+	 * 位置に値を除算する。
+	 * 
+	 * @param aValue 除算する値
+	 */
+	public void divide(final int aValue) {
+		x /= aValue;
+		y /= aValue;
+	}
+
+	/**
+	 * 位置に値を除算する。
+	 * 
+	 * @param aValue 除算する値
+	 */
+	public void divide(final float aValue) {
+		x /= aValue;
+		y /= aValue;
+	}
+
+	/**
+	 * 位置に値を除算する。
+	 * 
+	 * @param aX X座標に除算する値
+	 * @param aY Y座標に除算する値
+	 */
+	public void divide(final int aX, final int aY) {
+		x /= aX;
+		y /= aY;
+	}
+
+	/**
+	 * 位置に値を除算する。
+	 * 
+	 * @param aX X座標に除算する値
+	 * @param aY Y座標に除算する値
+	 */
+	public void divide(final float aX, final float aY) {
+		x /= aX;
+		y /= aY;
+	}
+
+	/**
+	 * X座標に値を除算する。
+	 * 
+	 * @param aValue 除算する値
+	 */
+	public void divideX(final int aValue) {
+		x /= aValue;
+	}
+
+	/**
+	 * X座標に値を除算する。
+	 * 
+	 * @param aValue 除算する値
+	 */
+	public void divideX(final float aValue) {
+		x /= aValue;
+	}
+
+	/**
+	 * Y座標に値を除算する。
+	 * 
+	 * @param aValue 除算する値
+	 */
+	public void divideY(final int aValue) {
+		y /= aValue;
+	}
+
+	/**
+	 * Y座標に値を除算する。
+	 * 
+	 * @param aValue 除算する値
+	 */
+	public void divideY(final float aValue) {
+		y /= aValue;
 	}
 }
