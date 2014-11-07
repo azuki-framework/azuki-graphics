@@ -17,6 +17,8 @@
  */
 package org.azkfw.graphics;
 
+import java.awt.Rectangle;
+
 /**
  * このクラスは、Rect情報を格納したクラスです。
  * 
@@ -54,6 +56,18 @@ public final class Rect {
 	 * @param aRect Rect情報
 	 */
 	public Rect(final Rect aRect) {
+		x = aRect.x;
+		y = aRect.y;
+		width = aRect.width;
+		height = aRect.height;
+	}
+
+	/**
+	 * コンストラクタ
+	 * 
+	 * @param aRect Rect情報
+	 */
+	public Rect(final Rectangle aRect) {
 		x = aRect.x;
 		y = aRect.y;
 		width = aRect.width;
