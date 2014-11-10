@@ -26,6 +26,9 @@ package org.azkfw.graphics;
  */
 public class Padding {
 
+	/** パディングなし */
+	public static final Padding ZERO = new Padding(0.f, 0.f, 0.f, 0.f);
+
 	/**
 	 * 上部パディング値
 	 */

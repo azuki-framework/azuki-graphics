@@ -26,6 +26,9 @@ package org.azkfw.graphics;
  */
 public class Margin {
 
+	/** マージンなし */
+	public static final Margin ZERO = new Margin(0.f, 0.f, 0.f, 0.f);
+
 	/**
 	 * 上部マージン値
 	 */
